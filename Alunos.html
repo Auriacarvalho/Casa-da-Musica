@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos - Casa da Música</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8; /* Cor de fundo mais suave */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333; /* Cor do texto do título */
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s; /* Efeito suave na borda */
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #007BFF; /* Cor da borda ao focar */
+            outline: none; /* Remove a borda padrão do navegador */
+        }
+        .form-group input:last-child, .form-group select:last-child {
+            margin-right: 0;
+        }
+        button {
+            background-color: #007BFF; /* Cor do botão */
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1em;
+            transition: background-color 0.3s; /* Efeito suave na cor do botão */
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3; /* Cor ao passar o mouse */
+        }
+        .table-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .button-update, .button-delete {
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s; /* Efeito suave na cor dos botões */
+        }
+        .button-update {
+            background-color: #28a745; /* Cor do botão de atualizar */
+            color: white;
+        }
+        .button-delete {
+            background-color: #dc3545; /* Cor do botão de excluir */
+            color: white;
+        }
+        .button-update:hover {
+            background-color: #218838; /* Cor ao passar o mouse */
+        }
+        .button-delete:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro de Alunos</h1>
+
+    <form>
+        <div class="form-group">
+            <input type="text" placeholder="Nome Completo" required style="flex: 2;">
+        </div>
+        <div class="form-group">
+            <input type="text" id="cpf" placeholder="CPF (11 dígitos)" required maxlength="11" style="flex: 0.2;"> <!-- Campo CPF com tamanho reduzido -->
+            <input type="date" placeholder="Data de Nascimento" required style="flex: 0.2;">
+            <input type="number" placeholder="Idade (0-99)" required min="0" max="99" style="flex: 0.1;"> <!-- Campo idade com tamanho reduzido -->
+            <select required style="flex: 0.2; margin-left: 10px;">
+                <option value="">Sexo</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+            <select required style="flex: 0.2; margin-left: 10px;">
+                <option value="">Cor</option>
+                <option value="branco">Branco</option>
+                <option value="preto">Preto</option>
+                <option value="pardo">Pardo</option>
+                <option value="amarelo">Amarelo</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="CPF do Responsável" required maxlength="11" style="flex: 0.2;">
+            <input type="text" placeholder="Nome do Responsável" required style="flex: 1;">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="CEP" required style="flex: 0.2;">
+            <input type="text" placeholder="Endereço" required style="flex: 1;">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Número" required style="flex: 0.2;">
+            <input type="text" placeholder="Bairro" required style="flex: 0.4;">
+            <input type="text" placeholder="Cidade" required style="flex: 0.3;">
+            <input type="text" placeholder="Estado" required style="flex: 0.2;">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Complemento" style="flex: 0.4;">
+        </div>
+        <div class="form-group">
+            <textarea placeholder="Observação" rows="4" style="flex: 1;"></textarea>
+        </div>
+        <div class="form-group">
+            <select required style="flex: 0.5;">
+                <option value="">Professor</option>
+                <!-- Adicione opções de professores aqui -->
+            </select>
+            <select required style="flex: 0.5;">
+                <option value="">Disciplina</option>
+                <!-- Adicione opções de disciplinas aqui -->
+            </select>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <div class="table-container">
+        <h2>Lista de Alunos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Matrícula</th>
+                    <th>Nome Completo</th>
+                    <th>CPF/CNPJ</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>João da Silva</td>
+                    <td>123.456.789-00</td>
+                    <td>
+                        <button class="button-update">Atualizar</button>
+                        <button class="button-delete">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Maria Oliveira</td>
+                    <td>987.654.321-00</td>
+                    <td>
+                        <button class="button-update">Atualizar</button>
+                        <button class="button-delete">Excluir</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        var cpf = document.querySelector("#cpf");
+
+        cpf.addEventListener("blur", function(){
+            if(cpf.value) {
+                // Remove todos os caracteres não numéricos
+                let value = cpf.value.replace(/\D/g, '');
+                if (value.length === 11) {
+                    // Aplica a máscara
+                    cpf.value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+                } else {
+                    alert("CPF deve conter 11 dígitos.");
+                    cpf.value = '';
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
