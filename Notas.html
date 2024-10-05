@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Notas - Casa da Música</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #EAE4DD; /* Cor do fundo (EAE4DD) */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #295F98; /* Azul */
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #E1D7C6; /* Cinza claro */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #CDC2A5; /* Bege */
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #295F98; /* Azul */
+            outline: none;
+        }
+        .form-group input:last-child {
+            margin-right: 0;
+        }
+        button {
+            background-color: #295F98; /* Azul */
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #1E4D73; /* Azul mais escuro */
+        }
+        .table-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #E1D7C6; /* Cinza claro */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #CDC2A5; /* Bege */
+            font-size: 1em;
+        }
+        th {
+            background-color: #295F98; /* Azul */
+            color: white;
+            font-weight: bold;
+        }
+        .button-update, .button-delete {
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Espaço entre os botões */
+        }
+        .button-update {
+            background-color: #28a745; /* Verde */
+            color: white;
+        }
+        .button-delete {
+            background-color: #dc3545; /* Vermelho */
+            color: white;
+        }
+        .button-update:hover {
+            background-color: #218838; /* Verde mais escuro */
+        }
+        .button-delete:hover {
+            background-color: #c82333; /* Vermelho mais escuro */
+        }
+        .action-buttons {
+            display: flex; /* Flex para colocar os botões lado a lado */
+            gap: 10px; /* Espaço entre os botões */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro de Notas</h1>
+
+    <form>
+        <div class="form-group">
+            <input type="number" placeholder="ID do Aluno" required>
+            <input type="number" placeholder="ID do Professor" required>
+        </div>
+        <div class="form-group">
+            <input type="number" placeholder="ID da Disciplina" required>
+            <input type="number" placeholder="Nota" step="0.01" min="0" max="10" required>
+        </div>
+        <button type="submit">Cadastrar Nota</button>
+    </form>
+
+    <div class="table-container">
+        <h2>Lista de Notas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID da Nota</th>
+                    <th>ID do Aluno</th>
+                    <th>ID do Professor</th>
+                    <th>ID da Disciplina</th>
+                    <th>Nota</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>201</td>
+                    <td>301</td>
+                    <td>8.50</td>
+                    <td class="action-buttons">
+                        <button class="button-update">Atualizar</button>
+                        <button class="button-delete">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>202</td>
+                    <td>302</td>
+                    <td>9.00</td>
+                    <td class="action-buttons">
+                        <button class="button-update">Atualizar</button>
+                        <button class="button-delete">Excluir</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

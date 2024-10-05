@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Faltas - Casa da Música</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #EAE4DD; /* Fundo do corpo */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #295F98; /* Cabeçalho */
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #E1D7C6; /* Cor do formulário */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #CDC2A5; /* Borda dos inputs */
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #007BFF; /* Cor ao focar */
+            outline: none;
+        }
+        .form-group input:last-child {
+            margin-right: 0;
+        }
+        button {
+            background-color: #007BFF; /* Cor azul para o botão */
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3; /* Tom mais escuro ao passar o mouse */
+        }
+        .table-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #E1D7C6; /* Cor do formulário */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+        th {
+            background-color: #295F98; /* Cabeçalho da tabela */
+            color: white; /* Texto branco no cabeçalho */
+            font-weight: bold;
+        }
+        .action-buttons {
+            display: flex; /* Usar display flex para os botões */
+            gap: 10px; /* Espaçamento entre os botões */
+        }
+        .button-update, .button-delete {
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .button-update {
+            background-color: #28a745; /* Cor do botão Atualizar */
+            color: white;
+        }
+        .button-delete {
+            background-color: #dc3545; /* Cor do botão Excluir */
+            color: white;
+        }
+        .button-update:hover {
+            background-color: #218838; /* Cor ao passar o mouse no botão Atualizar */
+        }
+        .button-delete:hover {
+            background-color: #c82333; /* Cor ao passar o mouse no botão Excluir */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro de Faltas</h1>
+
+    <form>
+        <div class="form-group">
+            <input type="number" placeholder="ID do Aluno" required>
+            <input type="number" placeholder="ID do Professor" required>
+        </div>
+        <div class="form-group">
+            <input type="number" placeholder="ID da Disciplina" required>
+            <input type="date" placeholder="Data da Falta" required>
+        </div>
+        <button type="submit">Cadastrar Falta</button>
+    </form>
+
+    <div class="table-container">
+        <h2>Lista de Faltas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID da Falta</th>
+                    <th>ID do Aluno</th>
+                    <th>ID do Professor</th>
+                    <th>ID da Disciplina</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>201</td>
+                    <td>301</td>
+                    <td>2024-09-15</td>
+                    <td class="action-buttons">
+                        <button class="button-update">Atualizar</button>
+                        <button class="button-delete">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>202</td>
+                    <td>302</td>
+                    <td>2024-09-16</td>
+                    <td class="action-buttons">
+                        <button class="button-update">Atualizar</button>
+                        <button class="button-delete">Excluir</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
+

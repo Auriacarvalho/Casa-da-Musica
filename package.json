@@ -1,0 +1,40 @@
+<<<<<<< HEAD
+add  package.json package-lock.json
+git{
+  "name": "back-end-casa-da-musica",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+=======
+{
+    "name": "casa-da-musica-controle-de-alunos",
+    "version": "1.0.0",
+    "main": "Login.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+         "dev": "nodemon server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "Sistema de controle de alunos para a Casa da Música",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.0",
+        "mysql2": "^3.11.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.4"
+    }
+>>>>>>> a79fcc6d1187050e0615e352addf900b531ea5ca
+}
