@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ atualização
     <title>Cadastro de Faltas - Casa da Música</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #EAE4DD; /* Fundo do corpo */
+
+    <title>Cadastro de Notas - Casa da Música</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+ main
             margin: 0;
             padding: 20px;
         }
         h1 {
             text-align: center;
             margin-bottom: 30px;
+ atualização
             color: #295F98; /* Cabeçalho */
+
+            color: #333;
+ main
             font-size: 2.5em;
             font-weight: bold;
         }
         form {
             max-width: 800px;
             margin: 0 auto;
+atualização
             background: #E1D7C6; /* Cor do formulário */
+
+            background: white;
+ main
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -35,14 +51,22 @@
         .form-group input {
             flex: 1;
             padding: 10px;
+ atualização
             border: 1px solid #CDC2A5; /* Borda dos inputs */
+
+            border: 1px solid #ccc;
+ main
             border-radius: 5px;
             margin-right: 10px;
             font-size: 1em;
             transition: border-color 0.3s;
         }
         .form-group input:focus {
+ atualização
             border-color: #007BFF; /* Cor ao focar */
+
+            border-color: #007BFF;
+ main
             outline: none;
         }
         .form-group input:last-child {
@@ -66,7 +90,11 @@
         .table-container {
             max-width: 800px;
             margin: 0 auto;
+ atualização
             background: #E1D7C6; /* Cor do formulário */
+
+            background: white;
+ main
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -83,6 +111,7 @@
             font-size: 1em;
         }
         th {
+ atualização
             background-color: #295F98; /* Cabeçalho da tabela */
             color: white; /* Texto branco no cabeçalho */
             font-weight: bold;
@@ -91,6 +120,11 @@
             display: flex; /* Usar display flex para os botões */
             gap: 10px; /* Espaçamento entre os botões */
         }
+
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+ main
         .button-update, .button-delete {
             padding: 8px 12px;
             border: none;
@@ -100,6 +134,7 @@
             transition: background-color 0.3s;
         }
         .button-update {
+ atualização
             background-color: #28a745; /* Cor do botão Atualizar */
             color: white;
         }
@@ -112,12 +147,30 @@
         }
         .button-delete:hover {
             background-color: #c82333; /* Cor ao passar o mouse no botão Excluir */
+
+            background-color: #28a745;
+            color: white;
+        }
+        .button-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+        .button-update:hover {
+            background-color: #218838;
+        }
+        .button-delete:hover {
+            background-color: #c82333;
+ main
         }
     </style>
 </head>
 <body>
 
+ atualização
     <h1>Cadastro de Faltas</h1>
+
+    <h1>Cadastro de Notas</h1>
+ main
 
     <form>
         <div class="form-group">
@@ -126,6 +179,7 @@
         </div>
         <div class="form-group">
             <input type="number" placeholder="ID da Disciplina" required>
+ atualização
             <input type="date" placeholder="Data da Falta" required>
         </div>
         <button type="submit">Cadastrar Falta</button>
@@ -141,6 +195,23 @@
                     <th>ID do Professor</th>
                     <th>ID da Disciplina</th>
                     <th>Data</th>
+
+            <input type="number" placeholder="Nota" step="0.01" min="0" max="10" required>
+        </div>
+        <button type="submit">Cadastrar Nota</button>
+    </form>
+
+    <div class="table-container">
+        <h2>Lista de Notas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID da Nota</th>
+                    <th>ID do Aluno</th>
+                    <th>ID do Professor</th>
+                    <th>ID da Disciplina</th>
+                    <th>Nota</th>
+ main
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -150,8 +221,13 @@
                     <td>101</td>
                     <td>201</td>
                     <td>301</td>
+ atualização
                     <td>2024-09-15</td>
                     <td class="action-buttons">
+
+                    <td>8.50</td>
+                    <td>
+ main
                         <button class="button-update">Atualizar</button>
                         <button class="button-delete">Excluir</button>
                     </td>
@@ -161,8 +237,13 @@
                     <td>102</td>
                     <td>202</td>
                     <td>302</td>
+ atualização
                     <td>2024-09-16</td>
                     <td class="action-buttons">
+
+                    <td>9.00</td>
+                    <td>
+ main
                         <button class="button-update">Atualizar</button>
                         <button class="button-delete">Excluir</button>
                     </td>
@@ -174,5 +255,8 @@
 
 </body>
 </html>
+ atualização
 
 
+
+ main
