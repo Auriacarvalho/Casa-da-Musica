@@ -7,24 +7,39 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ atualização
+            background-color: #E4DDDD; /* Cinza muito claro */
+
             background-color: #f0f4f8; /* Cor de fundo mais suave */
+ main
             margin: 0;
             padding: 20px;
         }
         h1 {
             text-align: center;
             margin-bottom: 30px;
+ atualização
+            color: #295F98; /* Azul */
+
             color: #333; /* Cor do texto do título */
+ main
             font-size: 2.5em;
             font-weight: bold;
         }
         form {
             max-width: 800px;
             margin: 0 auto;
+ atualização
+            background: #E1D7C6; /* Cinza claro */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
             background: white;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+ main
             margin-bottom: 20px;
         }
         .form-group {
@@ -35,6 +50,17 @@
         .form-group input, .form-group select, .form-group textarea {
             flex: 1;
             padding: 10px;
+ atualização
+            border: 1px solid #CDC2A5; /* Bege */
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #295F98; /* Azul */
+            outline: none;
+
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-right: 10px;
@@ -44,12 +70,17 @@
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             border-color: #007BFF; /* Cor da borda ao focar */
             outline: none; /* Remove a borda padrão do navegador */
+ main
         }
         .form-group input:last-child, .form-group select:last-child {
             margin-right: 0;
         }
         button {
+ atualização
+            background-color: #295F98; /* Azul */
+
             background-color: #007BFF; /* Cor do botão */
+ main
             color: white;
             border: none;
             padding: 12px;
@@ -57,19 +88,34 @@
             border-radius: 5px;
             width: 100%;
             font-size: 1em;
+ atualização
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #1E4D73; /* Azul mais escuro */
+
             transition: background-color 0.3s; /* Efeito suave na cor do botão */
             margin-top: 10px;
         }
         button:hover {
             background-color: #0056b3; /* Cor ao passar o mouse */
+ main
         }
         .table-container {
             max-width: 800px;
             margin: 0 auto;
+atualização
+            background: #E1D7C6; /* Cinza claro */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+ main
         }
         table {
             width: 100%;
@@ -79,11 +125,20 @@
         th, td {
             padding: 12px;
             text-align: left;
+ atualização
+            border: 1px solid #CDC2A5; /* Bege */
+            font-size: 1em;
+        }
+        th {
+            background-color: #295F98; /* Azul */
+            color: white;
+
             border: 1px solid #ddd;
             font-size: 1em;
         }
         th {
             background-color: #f2f2f2;
+ main
             font-weight: bold;
         }
         .button-update, .button-delete {
@@ -92,6 +147,28 @@
             cursor: pointer;
             border-radius: 5px;
             font-size: 0.9em;
+ atualização
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Espaço entre os botões */
+        }
+        .button-update {
+            background-color: #28a745; /* Verde */
+            color: white;
+        }
+        .button-delete {
+            background-color: #dc3545; /* Vermelho */
+            color: white;
+        }
+        .button-update:hover {
+            background-color: #218838; /* Verde mais escuro */
+        }
+        .button-delete:hover {
+            background-color: #c82333; /* Vermelho mais escuro */
+        }
+        .action-buttons {
+            display: flex; /* Flex para colocar os botões lado a lado */
+            gap: 10px; /* Espaço entre os botões */
+
             transition: background-color 0.3s; /* Efeito suave na cor dos botões */
         }
         .button-update {
@@ -107,6 +184,7 @@
         }
         .button-delete:hover {
             background-color: #c82333;
+ main
         }
     </style>
 </head>
@@ -172,7 +250,11 @@
                     <td>1</td>
                     <td>José Almeida</td>
                     <td>12345678900</td>
+ atualização
+                    <td class="action-buttons">
+
                     <td>
+ main
                         <button class="button-update">Atualizar</button>
                         <button class="button-delete">Excluir</button>
                     </td>
@@ -181,7 +263,11 @@
                     <td>2</td>
                     <td>Ana Costa</td>
                     <td>09876543211</td>
+ atualização
+                    <td class="action-buttons">
+
                     <td>
+ main
                         <button class="button-update">Atualizar</button>
                         <button class="button-delete">Excluir</button>
                     </td>
@@ -212,3 +298,8 @@
 </body>
 </html>
 
+ atualização
+
+
+
+ main
