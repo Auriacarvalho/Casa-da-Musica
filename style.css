@@ -1,5 +1,4 @@
- atualização
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -12,14 +11,14 @@
             align-items: flex-start;
             height: 100vh;
             margin: 0;
-            background-color: #e9ecef;
+            background-color: #f7f7f7; /* Cor de fundo */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .container {
             text-align: center;
-            background-color: rgba(173, 216, 230, 0.95); /* Fundo azul claro */
+            background-color: #ffffff; /* Fundo branco */
             padding: 40px;
-            border: 2px solid #00008B; /* Borda azul escuro */
+            border: 2px solid #323643; /* Borda azul escuro */
             border-radius: 10px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
             max-width: 800px;
@@ -27,7 +26,7 @@
             margin-top: 20px;
         }
         h2 {
-            color: #333;
+            color: #323643; /* Azul escuro */
             margin-bottom: 20px;
             font-size: 2em;
             font-weight: bold;
@@ -36,15 +35,16 @@
             display: block;
             margin: 10px 0 5px;
             font-weight: bold;
-            color: #555;
+            color: #606470; /* Cor neutra */
         }
         input[type="text"],
         select,
-        input[type="date"] {
+        input[type="date"],
+        textarea {
             width: calc(100% - 20px);
             padding: 10px;
             margin-top: 5px;
-            border: 1px solid #00008B; /* Borda azul escuro */
+            border: 1px solid #606470; /* Borda neutra */
             border-radius: 4px;
             box-sizing: border-box;
             background-color: #fff; /* Fundo branco */
@@ -53,12 +53,13 @@
         }
         input[type="text"]:focus,
         select:focus,
-        input[type="date"]:focus {
-            border-color: #007BFF; 
+        input[type="date"]:focus,
+        textarea:focus {
+            border-color: #93deff; /* Azul claro ao focar */
             outline: none;
         }
         input[type="submit"] {
-            background-color: #007BFF; /* Cor do botão */
+            background-color: #007BFF; /* Azul claro */
             color: white;
             border: none;
             cursor: pointer;
@@ -80,30 +81,42 @@
         th, td {
             padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #606470; /* Borda da tabela */
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #323643; /* Azul escuro */
+            color: white;
             font-weight: bold;
         }
         .action-buttons {
             display: flex;
             gap: 10px;
         }
-        button {
+        .button-update {
             padding: 8px 12px;
             border: none;
             border-radius: 4px;
-            background-color: #007BFF; /* Cor do botão */
+            background-color: #28a745; /* Verde */
             color: white;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Animação */
             font-size: 0.9em;
         }
-        button:hover {
-            background-color: #0056b3; /* Cor ao passar o mouse */
-            transform: translateY(-2px); /* Levantar o botão */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+        .button-update:hover {
+            background-color: #218838; /* Verde mais escuro */
+        }
+        .button-delete {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: #dc3545; /* Vermelho */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Animação */
+            font-size: 0.9em;
+        }
+        .button-delete:hover {
+            background-color: #c82333; /* Vermelho mais escuro */
         }
     </style>
 </head>
@@ -223,112 +236,3 @@
 
 </body>
 </html>
-=======
-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    margin: 0;
-    background-color: #e9ecef; /* Cor cinza claro */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-    max-width: 800px; /* Limitar a largura do container */
-    width: 100%;
-    margin-top: 20px;
-}
-
-h2 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-    color: #555; /* Cor do texto do rótulo */
-}
-
-input[type="text"],
-select,
-input[type="date"],
-input[type="submit"] {
-    width: calc(100% - 20px); /* Ajuste para o padding */
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Para incluir padding e border na largura total */
-    font-size: 1em; /* Aumenta a legibilidade */
-    transition: border-color 0.3s; /* Efeito de transição */
-}
-
-input[type="text"]:focus,
-select:focus,
-input[type="date"]:focus {
-    border-color: #007BFF; /* Cor da borda ao focar */
-    outline: none; /* Remove o contorno padrão */
-}
-
-input[type="submit"] {
-    background-color: #007BFF; /* Cor azul */
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s; /* Efeito de transição */
-    padding: 12px; /* Aumenta o padding para melhor usabilidade */
-    font-size: 1em; /* Aumenta a legibilidade */
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3; /* Cor do botão ao passar o mouse */
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 30px;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
-.action-buttons {
-    display: flex;
-    gap: 10px; /* Espaço entre os botões */
-}
-
-button {
-    padding: 8px 12px; /* Aumenta o tamanho do botão */
-    border: none;
-    border-radius: 4px;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 0.9em; /* Ajusta o tamanho da fonte do botão */
-}
-
-button:hover {
-    background-color: #0056b3; /* Cor do botão ao passar o mouse */
-}
- main
