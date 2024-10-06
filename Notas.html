@@ -21,7 +21,7 @@
         form {
             max-width: 800px;
             margin: 0 auto;
-            background: #93deff; /* Cor do formulário */
+            background: #ffffff; /* Fundo do formulário */
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -48,6 +48,9 @@
         .form-group input:last-child {
             margin-right: 0;
         }
+        input[name="nota"] {
+            background-color: #93deff; /* Fundo azul claro para a caixa de nota */
+        }
         button {
             background-color: #323643; /* Azul do botão Cadastrar */
             color: white;
@@ -66,7 +69,7 @@
         .table-container {
             max-width: 800px;
             margin: 0 auto;
-            background: #93deff; /* Cor do fundo da tabela */
+            background: #ffffff; /* Cor da tabela */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -97,7 +100,7 @@
             margin-right: 10px; /* Espaço entre os botões */
         }
         .button-update {
-            background-color: #81c7ff; /* Cor do botão Atualizar */
+            background-color: #93deff; /* Cor do botão Atualizar */
             color: #323643; /* Texto do botão Atualizar */
         }
         .button-delete {
@@ -105,7 +108,7 @@
             color: white;
         }
         .button-update:hover {
-            background-color: #93deff; /* Cor ao passar o mouse no botão Atualizar */
+            background-color: #81c7ff; /* Cor ao passar o mouse no botão Atualizar */
         }
         .button-delete:hover {
             background-color: #c82333; /* Cor ao passar o mouse no botão Excluir */
@@ -127,7 +130,7 @@
         </div>
         <div class="form-group">
             <input type="number" placeholder="ID da Disciplina" required>
-            <input type="number" placeholder="Nota" step="0.01" min="0" max="10" required>
+            <input type="number" name="nota" placeholder="Nota" step="0.01" min="0" max="10" required>
         </div>
         <button type="submit">Cadastrar Nota</button>
     </form>
