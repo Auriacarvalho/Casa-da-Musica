@@ -7,14 +7,14 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f7f7; /* Cor do fundo */
+            background-color: #f7f7f7; /* Fundo do corpo */
             margin: 0;
             padding: 20px;
         }
         h1 {
             text-align: center;
             margin-bottom: 30px;
-            color: #323643; /* Cabeçalho */
+            color: #323643; /* Cor do cabeçalho */
             font-size: 2.5em;
             font-weight: bold;
         }
@@ -42,14 +42,14 @@
             transition: border-color 0.3s;
         }
         .form-group input:focus {
-            border-color: #93deff; /* Cor ao focar */
+            border-color: #93deff; /* Azul claro ao focar */
             outline: none;
         }
         .form-group input:last-child {
             margin-right: 0;
         }
         button {
-            background-color: #323643; /* Cor do botão */
+            background-color: #323643; /* Azul do botão Cadastrar */
             color: white;
             border: none;
             padding: 12px;
@@ -66,7 +66,7 @@
         .table-container {
             max-width: 800px;
             margin: 0 auto;
-            background: #ffffff; /* Cor do formulário */
+            background: #ffffff; /* Cor da tabela */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -79,12 +79,12 @@
         th, td {
             padding: 12px;
             text-align: left;
-            border: 1px solid #606470; /* Borda da tabela */
+            border: 1px solid #ddd; /* Borda da tabela */
             font-size: 1em;
         }
         th {
             background-color: #323643; /* Cabeçalho da tabela */
-            color: white; /* Texto branco no cabeçalho */
+            color: white;
             font-weight: bold;
         }
         .button-update, .button-delete {
@@ -97,24 +97,18 @@
             margin-right: 10px; /* Espaço entre os botões */
         }
         .button-update {
-            background-color: #28a745; /* Verde */
-            color: white; /* Texto do botão Atualizar */
+            background-color: #93deff; /* Cor do botão Atualizar */
+            color: #323643; /* Texto do botão Atualizar */
         }
         .button-delete {
-            background-color: #dc3545; /* Vermelho */
-            color: white; /* Texto do botão Excluir */
-        }
-        button[type="submit"] {
-            background-color: #323643; /* Cor do botão Cadastrar Nota */
-        }
-        button[type="submit"]:hover {
-            background-color: #606470; /* Tom mais claro ao passar o mouse */
+            background-color: #dc3545; /* Cor do botão Excluir */
+            color: white;
         }
         .button-update:hover {
-            background-color: #218838; /* Verde mais escuro */
+            background-color: #81c7ff; /* Cor ao passar o mouse no botão Atualizar */
         }
         .button-delete:hover {
-            background-color: #c82333; /* Vermelho mais escuro */
+            background-color: #c82333; /* Cor ao passar o mouse no botão Excluir */
         }
         .action-buttons {
             display: flex; /* Flex para colocar os botões lado a lado */
@@ -181,4 +175,3 @@
 
 </body>
 </html>
-
