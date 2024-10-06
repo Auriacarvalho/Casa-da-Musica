@@ -21,7 +21,7 @@
         form {
             max-width: 800px;
             margin: 0 auto;
-            background: #ffffff; /* Branco para o formulário */
+            background: #93deff; /* Azul claro */
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@
             margin-right: 0;
         }
         button {
-            background-color: #323643; /* Cinza escuro para o botão */
+            background-color: #295F98; /* Azul */
             color: white;
             border: none;
             padding: 12px;
@@ -61,12 +61,12 @@
             margin-top: 10px;
         }
         button:hover {
-            background-color: #606470; /* Cinza médio ao passar o mouse */
+            background-color: #1E4D73; /* Azul mais escuro */
         }
         .table-container {
             max-width: 800px;
             margin: 0 auto;
-            background: #ffffff; /* Branco para a tabela */
+            background: #93deff; /* Azul claro */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -87,31 +87,31 @@
             color: white;
             font-weight: bold;
         }
-        .btn-excluir {
-            background-color: #dc3545; /* Vermelho */
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 0.9em;
-            transition: background-color 0.3s;
-        }
-        .btn-cadastrar {
+        .button-update {
             background-color: #28a745; /* Verde */
             color: white;
-            border: none;
             padding: 8px 12px;
+            border: none;
             cursor: pointer;
             border-radius: 5px;
             font-size: 0.9em;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s; /* Efeito suave na cor do botão */
         }
-        .btn-excluir:hover {
-            background-color: #c82333; /* Vermelho mais escuro */
+        .button-delete {
+            background-color: #dc3545; /* Vermelho */
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s; /* Efeito suave na cor do botão */
         }
-        .btn-cadastrar:hover {
+        .button-update:hover {
             background-color: #218838; /* Verde mais escuro */
+        }
+        .button-delete:hover {
+            background-color: #c82333; /* Vermelho mais escuro */
         }
         .action-buttons {
             display: flex; /* Flex para colocar os botões lado a lado */
@@ -122,6 +122,7 @@
 <body>
 
     <h1>Cadastro de Disciplinas</h1>
+
     <form>
         <div class="form-group">
             <input type="number" placeholder="ID da Disciplina" required>
@@ -130,7 +131,6 @@
             <input type="text" placeholder="Nome da Disciplina" required>
             <input type="time" placeholder="Carga Horária" required>
         </div>
-        
         <div class="form-group">
             <select required>
                 <option value="">Turno</option>
@@ -156,23 +156,23 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>001</td>
-                    <td>Canto</td>
-                    <td>60</td>
-                    <td>Manhã</td>
+                    <td>1</td>
+                    <td>Teoria Musical</td>
+                    <td>02:00</td>
+                    <td>Matutino</td>
                     <td class="action-buttons">
-                        <button class="btn-excluir">Excluir</button>
-                        <button class="btn-cadastrar">Cadastrar</button>
+                        <button class="button-update">Atualizar</button>
+                        <button class="button-delete">Excluir</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>002</td>
-                    <td>Violão</td>
-                    <td>45</td>
-                    <td>Noite</td>
+                    <td>2</td>
+                    <td>Violão Básico</td>
+                    <td>01:30</td>
+                    <td>Vespertino</td>
                     <td class="action-buttons">
-                        <button class="btn-excluir">Excluir</button>
-                        <button class="btn-cadastrar">Cadastrar</button>
+                        <button class="button-update">Atualizar</button>
+                        <button class="button-delete">Excluir</button>
                     </td>
                 </tr>
                 <!-- Adicione mais linhas conforme necessário -->
