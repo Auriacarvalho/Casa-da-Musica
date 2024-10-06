@@ -176,7 +176,6 @@
 <body>
 
     <h1>Cadastro de Disciplinas</h1>
-
     <form>
         <div class="form-group">
             <input type="number" placeholder="ID da Disciplina" required>
@@ -185,6 +184,7 @@
             <input type="text" placeholder="Nome da Disciplina" required>
             <input type="time" placeholder="Carga Horária" required>
         </div>
+        
         <div class="form-group">
             <select required>
                 <option value="">Turno</option>
@@ -198,48 +198,42 @@
 
     <div class="table-container">
         <h2>Lista de Disciplinas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID da Disciplina</th>
-                    <th>Nome</th>
-                    <th>Carga Horária</th>
-                    <th>Turno</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Teoria Musical</td>
-                    <td>02:00</td>
-                    <td>Matutino</td>
- atualização
-                    <td class="action-buttons">
+       <table>
+    <thead>
+        <tr>
+            <th>ID da Disciplina</th>
+            <th>Nome</th>
+            <th>Carga Horária</th>
+            <th>Turno</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aqui você pode adicionar as linhas de dados da tabela -->
+        <tr>
+            <td>001</td>
+            <td>Canto</td>
+            <td>60</td>
+            <td>Manhã</td>
+            <td>
+                <button>Editar</button>
+                <button>Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Violão</td>
+            <td>45</td>
+            <td>Noite</td>
+            <td>
+                <button>Editar</button>
+                <button>Excluir</button>
+            </td>
+        </tr>
+        <!-- Adicione mais linhas conforme necessário -->
+    </tbody>
+</table>
 
-                    <td>
- main
-                        <button class="button-update">Atualizar</button>
-                        <button class="button-delete">Excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Violão Básico</td>
-                    <td>01:30</td>
-                    <td>Vespertino</td>
- atualização
-                    <td class="action-buttons">
-
-                    <td>
- main
-                        <button class="button-update">Atualizar</button>
-                        <button class="button-delete">Excluir</button>
-                    </td>
-                </tr>
-                <!-- Adicione mais linhas conforme necessário -->
-            </tbody>
-        </table>
     </div>
 
 </body>
