@@ -1,144 +1,133 @@
-/* Estilos Gerais */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0;
-    background-color: #f7f7f7; /* Cor de fundo */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7; /* Fundo do corpo */
+    margin: 0;
+    padding: 20px;
 }
 
-/* Container Principal */
-.container {
+h1 {
     text-align: center;
-    background-color: #ffffff; /* Fundo branco */
-    padding: 40px;
-    border: 2px solid #323643; /* Borda azul escuro */
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    color: #323643; /* Cor do cabeçalho */
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+form {
     max-width: 800px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-/* Estilos de Títulos */
-h2 {
-    color: #323643; /* Azul escuro */
+    margin: 0 auto;
+    background: #93deff; /* Cor do formulário */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    font-size: 2em;
-    font-weight: bold;
 }
 
-/* Estilos de Labels */
-label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-    color: #606470; /* Cor neutra */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-/* Estilos de Inputs e Selects */
-input[type="text"],
-input[type="number"],
-select,
-input[type="date"],
-textarea {
-    width: calc(100% - 20px);
+.form-group input {
+    flex: 1;
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #606470; /* Borda neutra */
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #fff; /* Fundo branco */
+    border: 1px solid #606470; /* Borda dos inputs */
+    border-radius: 5px;
+    margin-right: 10px;
     font-size: 1em;
     transition: border-color 0.3s;
 }
 
-/* Estilos de Foco */
-input[type="text"]:focus,
-select:focus,
-input[type="date"]:focus,
-textarea:focus {
+.form-group input:focus {
     border-color: #93deff; /* Azul claro ao focar */
     outline: none;
 }
 
-/* Estilo do Botão de Submit */
-input[type="submit"] {
-    background-color: #007BFF; /* Azul claro */
+.form-group input:last-child {
+    margin-right: 0;
+}
+
+button {
+    background-color: #323643; /* Azul do botão Cadastrar */
     color: white;
     border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
     padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
     font-size: 1em;
-    border-radius: 25px;
-    box-shadow: 0px 4px 12px rgba(9, 12, 60, 0.15);
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    display: flex; /* Flex para alinhar o ícone e o texto */
+    align-items: center; /* Alinhamento vertical do ícone */
+    justify-content: center; /* Centraliza o texto e o ícone */
 }
 
-/* Estilo do Hover no Botão de Submit */
-input[type="submit"]:hover {
-    background-color: #0056b3; /* Cor ao passar o mouse */
+button:hover {
+    background-color: #606470; /* Tom mais claro ao passar o mouse */
 }
 
-/* Estilos de Tabela */
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff; /* Cor da tabela */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 th, td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #606470; /* Borda da tabela */
+    border: 1px solid #ddd; /* Borda da tabela */
+    font-size: 1em;
 }
 
-/* Estilos de Cabeçalho da Tabela */
 th {
-    background-color: #323643; /* Azul escuro */
+    background-color: #323643; /* Cabeçalho da tabela */
     color: white;
     font-weight: bold;
 }
 
-/* Estilos dos Botões de Ação */
-.action-buttons {
-    display: flex;
-    gap: 10px;
+.button-update, .button-delete {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    display: flex; /* Flex para alinhar o ícone e o texto */
+    align-items: center; /* Alinhamento vertical do ícone */
 }
 
-/* Estilo do Botão de Atualizar */
 .button-update {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    background-color: #28a745; /* Verde */
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Animação */
-    font-size: 0.9em;
+    background-color: #28a745; /* Verde para Atualizar */
+    color: white; /* Texto do botão Atualizar */
 }
 
-/* Estilo do Hover no Botão de Atualizar */
-.button-update:hover {
-    background-color: #218838; /* Verde mais escuro */
-}
-
-/* Estilo do Botão de Excluir */
 .button-delete {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    background-color: #dc3545; /* Vermelho */
+    background-color: #dc3545; /* Vermelho para Excluir */
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Animação */
-    font-size: 0.9em;
 }
 
-/* Estilo do Hover no Botão de Excluir */
-.button-delete:hover {
-    background-color: #c82333; /* Vermelho mais escuro */
+.button-update:hover {
+    background-color: #218838; /* Cor ao passar o mouse no botão Atualizar */
 }
+
+.button-delete:hover {
+    background-color: #c82333; /* Cor ao passar o mouse no botão Excluir */
+}
+
+.action-buttons {
+    display: flex; /* Flex para colocar os botões lado a lado */
+    gap: 10px; /* Espaço entre os botões */
+}
+
 
