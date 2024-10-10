@@ -9,6 +9,10 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ Atualização-1casa-da-musica
+
+            background-color: #ffffff; /* Cor de fundo */
+ main
             margin: 0;
             padding: 20px;
             background-color: #f7f7f7;
@@ -23,7 +27,11 @@
         form {
             max-width: 800px;
             margin: 0 auto;
+ Atualização-1casa-da-musica
             background: #93deff;
+
+            background: #93deff; /* Cor do formulário */
+ main
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -35,8 +43,14 @@
             margin-bottom: 20px;
         }
         .form-group input, .form-group select, .form-group textarea {
+ Atualização-1casa-da-musica
             padding: 5px;
             border: 1px solid #606470;
+
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #606470; /* Borda das entradas */
+ main
             border-radius: 5px;
             font-size: 1em;
             transition: border-color 0.3s;
@@ -45,6 +59,9 @@
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             border-color: #323643;
+
+            border-color: #93deff; /* Azul claro ao focar */
+ main
             outline: none;
         }
         .form-group input:last-child {
@@ -74,7 +91,11 @@
         .table-container {
             max-width: 800px;
             margin: 0 auto;
+ Atualização-1casa-da-musica
             background: #93deff;
+
+            background: #93deff; /* Cor da tabela */
+ main
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -237,10 +258,26 @@
     </div>
 
     <script>
+ Atualização-1casa-da-musica
         function formatCPF(input) {
             let cpf = input.value.replace(/\D/g, '');
             if (cpf.length > 11) {
                 cpf = cpf.substring(0, 11);
+
+        var cpf = document.querySelector("#cpf");
+
+        cpf.addEventListener("blur", function(){
+            if(cpf.value) {
+                // Remove todos os caracteres não numéricos
+                let value = cpf.value.replace(/\D/g, '');
+                if (value.length === 11) {
+                    // Aplica a máscara
+                    cpf.value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+                } else {
+                    alert("CPF deve conter 11 dígitos.");
+                    cpf.value = '';
+                }
+ main
             }
             if (cpf.length <= 9) {
                 input.value = cpf.replace(/(\d{3})(\d)/, '$1.$2');
@@ -285,6 +322,7 @@
     </script>
 </body>
 </html>
+Atualização-1casa-da-musica
 
 
 
@@ -293,3 +331,5 @@
 
 
 
+
+ main
