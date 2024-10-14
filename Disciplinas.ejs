@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Disciplinas - Casa da Música</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff; /* Cor de fundo da página em branco */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #323643; /* Cinza escuro */
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        form, .table-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #93deff; /* Azul claro para o fundo do formulário */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .form-group input, .form-group select {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #606470; /* Cinza médio */
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #323643; /* Cinza escuro */
+            outline: none;
+        }
+        .form-group input:last-child, .form-group select:last-child {
+            margin-right: 0;
+        }
+        button {
+            background-color: #295F98; /* Azul */
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            display: flex;
+            align-items: center; /* Alinhamento vertical dos ícones */
+            justify-content: center; /* Centraliza o texto e o ícone */
+        }
+        button:hover {
+            background-color: #1E4D73; /* Azul mais escuro */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #606470; /* Cinza médio */
+            font-size: 1em;
+        }
+        th {
+            background-color: #323643; /* Cinza escuro */
+            color: white;
+            font-weight: bold;
+        }
+        .button-update {
+            background-color: #28a745; /* Verde */
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s; /* Efeito suave na cor do botão */
+            display: flex; /* Flex para alinhar o ícone e o texto */
+            align-items: center; /* Alinhamento vertical do ícone */
+        }
+        .button-delete {
+            background-color: #dc3545; /* Vermelho */
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s; /* Efeito suave na cor do botão */
+            display: flex; /* Flex para alinhar o ícone e o texto */
+            align-items: center; /* Alinhamento vertical do ícone */
+        }
+        .button-update:hover {
+            background-color: #218838; /* Verde mais escuro */
+        }
+        .button-delete:hover {
+            background-color: #c82333; /* Vermelho mais escuro */
+        }
+        .action-buttons {
+            display: flex; /* Flex para colocar os botões lado a lado */
+            gap: 10px; /* Espaço entre os botões */
+        }
+        .action-buttons button {
+            width: auto; /* Permite que o botão ajuste a largura automaticamente */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro de Disciplinas</h1>
+
+    <form>
+        <div class="form-group">
+            <input type="number" placeholder="ID da Disciplina" required>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Nome da Disciplina" required>
+            <input type="time" placeholder="Carga Horária" required>
+        </div>
+        <div class="form-group">
+            <select required>
+                <option value="">Turno</option>
+                <option value="matutino">Matutino</option>
+                <option value="vespertino">Vespertino</option>
+                <option value="noturno">Noturno</option>
+            </select>
+        </div>
+        <button type="submit"><i class="fas fa-plus"></i> Cadastrar</button>
+    </form>
+
+    <div class="table-container">
+        <h2>Lista de Disciplinas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID da Disciplina</th>
+                    <th>Nome</th>
+                    <th>Carga Horária</th>
+                    <th>Turno</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Teoria Musical</td>
+                    <td>02:00</td>
+                    <td>Matutino</td>
+                    <td class="action-buttons">
+                        <button class="button-update"><i class="fas fa-edit"></i> Atualizar</button>
+                        <button class="button-delete"><i class="fas fa-trash"></i> Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Violão Básico</td>
+                    <td>01:30</td>
+                    <td>Vespertino</td>
+                    <td class="action-buttons">
+                        <button class="button-update"><i class="fas fa-edit"></i> Atualizar</button>
+                        <button class="button-delete"><i class="fas fa-trash"></i> Excluir</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
+
+
+

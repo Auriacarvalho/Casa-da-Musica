@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'auria', // Substitua pela sua senha
+    password: 'admin', // Substitua pela sua senha
     database: 'casa_da_musica'
 });
 
